@@ -13,6 +13,11 @@ body
 h1, h2, h3, h4, h5, h6
     margin: 0
 // BUTTONS
+button
+    outline: none
+    border: none
+    border-radius: 5px
+    width: 200px
 .btn
     display: inline-block
     cursor: pointer
@@ -173,6 +178,7 @@ h1, h2, h3, h4, h5, h6
     z-index: 9999
     transition: .4s
     border-radius: 5px
+    box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.75)
     ul
         list-style: none
     li
@@ -216,6 +222,7 @@ h1, h2, h3, h4, h5, h6
         &_title
             font-size: 24px
             +bold
+            margin-left: 5px
     &-menu
         &-first
             justify-self: center
@@ -227,6 +234,10 @@ h1, h2, h3, h4, h5, h6
             justify-content: center
             a
                 padding: 5px 0
+                +bold
+                font-size: 14px
+            p
+                margin-top: 10px
     &-corp
         padding: 22px 0
         &_text
@@ -257,4 +268,5 @@ h1, h2, h3, h4, h5, h6
                 padding: 20px
 .slick-list
     width: 100%
+
 //END SLICK SLIDER
