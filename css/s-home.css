@@ -465,12 +465,14 @@ button {
 }
 
 .header {
-  background-color: #979797;
-  position: relative;
+  background-image: url(../assets/img/home-header.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .header-content {
-  height: 600px;
+  height: 100vh;
   display: -ms-grid;
   display: grid;
   -ms-flex-line-pack: center;
@@ -478,18 +480,14 @@ button {
 }
 
 .content {
-  max-width: 700px;
+  max-width: 900px;
   color: #ffffff;
 }
 
 .content-title {
-  font-size: 72px;
-}
-
-.content-text {
-  font-size: 18px;
-  font-family: 'Montserrat Light', sans-serif;
-  margin: 45px 0;
+  font-size: 67px;
+  font-family: 'Montserrat Bold', sans-serif;
+  margin-bottom: 30px;
 }
 
 .content-arrow {
@@ -501,69 +499,88 @@ button {
 }
 
 .about {
-  margin-bottom: 130px;
   padding-top: 80px;
-}
-
-.about-title {
-  font-size: 48px;
-  font-family: 'Montserrat Bold', sans-serif;
-  text-align: center;
-  margin: 0 0 32px 0;
-}
-
-.about-text {
-  color: #979797;
-  font-size: 14px;
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.gallery {
-  margin-bottom: 130px;
-}
-
-.gallery-title {
-  font-family: 'Montserrat Bold', sans-serif;
-  font-size: 48px;
-  margin-bottom: 100px;
-  text-align: center;
-}
-
-.gallery-card {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  grid-gap: 10px;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 10px;
 }
 
-.gallery-card__item {
-  height: 300px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  padding: 20px;
-  border-radius: 10px;
-  position: relative;
+.about-image {
+  width: 100%;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.gallery-card__item:nth-child(1) {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
-  grid-column: 1 / 3;
+.about:nth-child(4) {
+  padding-bottom: 80px;
 }
 
-.gallery-card__item:nth-child(6) {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 3;
-  grid-column: 1 / 4;
+.about-info {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
-.gallery-card__item span {
-  position: absolute;
-  bottom: 10px;
-  left: 10px;
+.about-info_title {
+  font-size: 42px;
+  font-family: 'Montserrat Bold', sans-serif;
+  color: #1C2E3D;
+}
+
+.about-info_text {
+  color: #1C2E3D;
+  margin: 15px 0;
+  font-family: 'Montserrat Light', sans-serif;
+}
+
+.about-info_more {
+  color: #00859D;
+}
+
+.map {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 2fr 1fr;
+      grid-template-columns: 2fr 1fr;
+}
+
+.map-image {
+  height: 500px;
+  width: 100%;
+}
+
+.map-info {
+  background-color: #1B3242;
+  color: #ffffff;
+  padding: 0 25px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.map-info_title {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 25px;
+  text-align: center;
+}
+
+.map-info_text {
+  font-size: 12px;
+  margin: 20px 0;
+}
+
+.map-info_more {
+  color: #00859D;
 }
 
 .booking {
@@ -575,6 +592,7 @@ button {
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 130px;
+  margin-top: 100px;
 }
 
 .booking-info {
@@ -671,7 +689,6 @@ button {
 @media screen and (max-width: 1200px) {
   .navbar,
   .content,
-  .gallery,
   .booking,
   .footer-wrap {
     padding: 0 20px;
@@ -682,6 +699,9 @@ button {
 }
 
 @media screen and (max-width: 1110px) {
+  .content-title {
+    font-size: 45px;
+  }
   .booking-card {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
@@ -701,6 +721,9 @@ button {
 }
 
 @media screen and (max-width: 912px) {
+  .about-info_title {
+    font-size: 30px;
+  }
   .booking-info_title {
     font-size: 60px;
   }
@@ -719,6 +742,9 @@ button {
 }
 
 @media screen and (max-width: 814px) {
+  .map-image {
+    height: 300px;
+  }
   .footer-contacts_numbers {
     font-size: 12px;
   }
@@ -731,35 +757,15 @@ button {
   .navbar-menu {
     width: 50%;
   }
-  .content-title {
-    font-size: 60px;
-  }
-  .content-text {
-    font-size: 12px;
-  }
   .btn {
     padding: 16px 25px;
   }
   .about {
     padding: 0 20px;
+    padding-top: 60px;
   }
-  .gallery-title {
-    margin-bottom: 32px;
-  }
-  .gallery-card {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
-  .gallery-card__item {
-    height: 250px;
-  }
-  .gallery-card__item:nth-child(1) {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 1;
-    grid-column: 1 / 2;
-  }
-  .gallery-card__item:nth-child(6) {
-    grid-column: initial;
+  .about-info_text {
+    font-size: 13px;
   }
   .booking {
     -ms-grid-columns: (1fr)[1];
@@ -799,25 +805,80 @@ button {
 }
 
 @media screen and (max-width: 698px) {
-  .footer {
+  .about {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+    grid-gap: 0;
+  }
+  .about-image {
+    width: 100%;
+  }
+  .about-info_title {
+    margin-top: 10px;
+  }
+  .about:nth-child(2), .about:nth-child(4) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-flow: wrap;
+        flex-flow: wrap;
+  }
+  .about:nth-child(2) .about-image, .about:nth-child(4) .about-image {
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  .about:nth-child(2) .about-info, .about:nth-child(4) .about-info {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .map {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .map-image {
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+  }
+  .map-info {
+    padding: 40px;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  footer .footer {
     -ms-grid-columns: (1fr)[1];
         grid-template-columns: repeat(1, 1fr);
   }
-  .footer-logo, .footer-menu-first, .footer-menu-second, .footer-contacts {
+  footer .footer-logo, footer .footer-menu-first, footer .footer-menu-second, footer .footer-contacts {
     text-align: center;
     -ms-grid-column-align: center;
         justify-self: center;
   }
-  .footer-menu-first, .footer-menu-second {
+  footer .footer-logo img {
+    width: 35px;
+    height: 40px;
+  }
+  footer .footer-menu-first li, footer .footer-menu-second li {
+    padding: 8px;
+  }
+  footer .footer-menu-first a, footer .footer-menu-second a {
+    font-family: 'Montserrat Regular', sans-serif;
+  }
+  footer .footer-menu-first, footer .footer-menu-second {
     font-family: 'Montserrat Bold', sans-serif;
   }
-  .footer-contacts {
-    margin-top: 20px;
+  footer .footer-contacts {
+    display: none;
   }
-  .footer-contacts-numbers {
-    margin-top: 5px;
-  }
-  .footer-corp {
+  footer .footer-corp {
     text-align: center;
   }
 }
@@ -825,7 +886,6 @@ button {
 @media screen and (max-width: 480px) {
   .navbar,
   .content,
-  .gallery,
   .booking,
   .footer-wrap {
     padding: 0 10px;
@@ -840,32 +900,16 @@ button {
     font-size: 18px;
     font-family: 'Montserrat Bold', sans-serif;
   }
-  .header-content {
-    height: 470px;
-  }
   .content-title {
     font-size: 42px;
   }
   .content-text {
     margin: 30px 0;
   }
-  .about {
-    margin-bottom: 90px;
-  }
   .about-title {
     font-size: 42px;
     margin: 0 0 25px 0;
     padding-top: 40px;
-  }
-  .gallery {
-    margin-bottom: 90px;
-  }
-  .gallery-title {
-    font-size: 42px;
-  }
-  .gallery-card {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
   }
   .booking {
     margin-bottom: 90px;
@@ -884,6 +928,9 @@ button {
 @media screen and (max-width: 390px) {
   .navbar-title {
     font-size: 16px;
+  }
+  .content-title {
+    font-size: 35px;
   }
   .booking-card__item:nth-child(1) {
     width: 100px;
