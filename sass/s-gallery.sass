@@ -1,0 +1,45 @@
+@import 'colors'
+@import 'fonts'
+@import 'style'
+
+.navbar
+    &-burger
+        span
+            background-color: $text-black
+            &::after
+                background-color: $text-black
+    &-logo
+        h5
+            color: $text-black
+    &-language
+        a
+            color: $text-black
+        img
+            background-color: $text-black
+            padding: 3px
+                
+.header
+    position: relative
+.header-content
+    // background-color: $text-gray
+    height: 600px
+    display: grid
+    align-content: center
+    justify-self: center
+.content
+    max-width: 700px
+    color: $text-black
+    text-align: center
+    margin: 0 auto
+    &-title
+        font-size: 50px
+        +bold
+    &-text
+        font-size: 14px
+        +light
+        margin: 45px 0
+    &-arrow
+        bottom: 5%
+        left: 50%
+        position: absolute
+        transform: translateX(-50%)

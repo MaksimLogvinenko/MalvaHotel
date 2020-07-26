@@ -1,0 +1,896 @@
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url("../assets/fonts/");
+  src: url("../assets/fonts/?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-Light.woff") format("woff"), url("../assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url("../assets/fonts/Montserrat-Regular.eot");
+  src: url("../assets/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-Regular.woff") format("woff"), url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Semibold';
+  src: url("../assets/fonts/Montserrat-SemiBold.eot");
+  src: url("../assets/fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-SemiBold.woff") format("woff"), url("../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("../assets/fonts/Montserrat-ExtraBold.eot");
+  src: url("../assets/fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-ExtraBold.woff") format("woff"), url("../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  overflow-x: hidden;
+  font-size: 16px;
+  color: #1C2E3D;
+  font-family: 'Montserrat Regular', sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+.btn {
+  display: inline-block;
+  cursor: pointer;
+  padding: 22px 44px;
+  font-family: 'Montserrat Light', sans-serif;
+  color: #ffffff;
+  text-decoration: none;
+  letter-spacing: 3px;
+  text-align: center;
+  font-size: 12px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.btn-blue {
+  background-color: #00859D;
+  border-radius: 5px;
+}
+
+.btn-blue:hover {
+  background: #005a6a;
+}
+
+.btn-orange {
+  background-color: #E8594E;
+}
+
+.btn-orange:hover {
+  background: #e22f21;
+}
+
+.btn-menu {
+  border: 1px solid #00859D;
+  color: #00859D;
+  margin-top: 30px;
+}
+
+.container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.navbar-language_active img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.navbar {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  height: 100px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-language {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.navbar-language a {
+  text-decoration: none;
+  color: #ffffff;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-language img {
+  margin-left: 5px;
+  width: 15px;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.navbar-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar-logo h5 {
+  text-transform: uppercase;
+  font-family: 'Montserrat Bold', sans-serif;
+  color: #ffffff;
+}
+
+.navbar-logo img {
+  width: 50px;
+  padding: 0 5px;
+}
+
+.navbar-burger {
+  -ms-grid-column-align: start;
+      justify-self: start;
+  display: -ms-grid;
+  display: grid;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.navbar-burger span {
+  width: 30px;
+  height: 2px;
+  background-color: #ffffff;
+  position: relative;
+}
+
+.navbar-burger span::after {
+  content: '';
+  width: 100%;
+  height: 0.15rem;
+  background-color: #ffffff;
+  margin: 0.3rem 0;
+  position: absolute;
+}
+
+.navbar-wrap {
+  position: fixed;
+  width: 100%;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.navbar-wrap_active {
+  background-color: #6d6d6d;
+  position: fixed;
+  opacity: .92;
+  z-index: 999;
+  -webkit-transition: .9s;
+  transition: .9s;
+}
+
+.navbar-wrap_active .navbar {
+  height: 50px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+}
+
+.navbar-wrap_active .navbar-logo img {
+  display: none;
+}
+
+.navbar-wrap_active .navbar-title {
+  -ms-grid-column-align: start;
+      justify-self: start;
+}
+
+.navbar-menu {
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 470px;
+  height: 100%;
+  position: fixed;
+  background-color: #ffffff;
+  text-align: center;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  -webkit-box-shadow: 10px 0px 5px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 10px 0px 5px 0px rgba(0, 0, 0, 0.25);
+  -webkit-transition: .4s;
+  transition: .4s;
+  -webkit-transform: translateX(-110%);
+          transform: translateX(-110%);
+}
+
+.navbar-menu_close img {
+  width: 50px;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbar-menu ul {
+  list-style: none;
+}
+
+.navbar-menu__link {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.navbar-menu__link::before {
+  content: '';
+  width: 20px;
+  height: 2px;
+  background-color: #00859D;
+  bottom: 0;
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.navbar-menu a {
+  text-decoration: none;
+  padding: 10px 0;
+  width: 90%;
+  display: inline-block;
+  color: #1C2E3D;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.navbar-menu a:hover {
+  color: #00859D;
+}
+
+.menu_active {
+  -webkit-transform: translateX(0%);
+          transform: translateX(0%);
+}
+
+.navbar-language_menu {
+  display: none;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  width: 300px;
+  padding: 30px 0;
+  position: fixed;
+  background-color: #ffffff;
+  text-align: center;
+  top: 80px;
+  right: 20px;
+  z-index: 9999;
+  -webkit-transition: .4s;
+  transition: .4s;
+  border-radius: 5px;
+}
+
+.navbar-language_menu ul {
+  list-style: none;
+}
+
+.navbar-language_menu li {
+  padding: 12px 0;
+  width: 90%;
+  text-align: center;
+  margin: 0 auto;
+  border-bottom: 1px solid #979797;
+}
+
+.navbar-language_menu li:first-child {
+  border-top: 1px solid #979797;
+}
+
+.navbar-language_menu a {
+  text-decoration: none;
+  color: #1C2E3D;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.navbar-language_menu a:hover {
+  color: #00859D;
+}
+
+.footer-wrap {
+  border-top: 1px solid #979797;
+  border-bottom: 1px solid #979797;
+}
+
+.footer {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin: 30px 0;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 100%;
+}
+
+.footer ul {
+  list-style: none;
+}
+
+.footer li {
+  padding: 5px;
+}
+
+.footer a {
+  text-decoration: none;
+  color: #1C2E3D;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.footer a:hover {
+  color: #00859D;
+}
+
+.footer-logo {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-logo_title {
+  font-size: 24px;
+  font-family: 'Montserrat Bold', sans-serif;
+}
+
+.footer-menu-first {
+  -ms-grid-column-align: center;
+      justify-self: center;
+}
+
+.footer-contacts {
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.footer-contacts_numbers {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.footer-contacts_numbers a {
+  padding: 5px 0;
+}
+
+.footer-corp {
+  padding: 22px 0;
+}
+
+.footer-corp_text {
+  font-size: 13px;
+  color: #979797;
+}
+
+.slider-title {
+  margin: 75px 0;
+  font-size: 38px;
+}
+
+.slider-menu {
+  height: 400px;
+}
+
+.slider-menu__item {
+  height: 400px;
+  width: 250px;
+  margin: 0 20px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.slider-menu__item span {
+  color: #ffffff;
+  left: 0;
+  bottom: 0;
+  position: absolute;
+  padding: 20px;
+}
+
+.slick-list {
+  width: 100%;
+}
+
+.header {
+  background-color: #979797;
+  position: relative;
+}
+
+.header-content {
+  height: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.content {
+  max-width: 700px;
+  color: #ffffff;
+}
+
+.content-title {
+  font-size: 72px;
+}
+
+.content-text {
+  font-size: 18px;
+  font-family: 'Montserrat Light', sans-serif;
+  margin: 45px 0;
+}
+
+.content-arrow {
+  bottom: 5%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+
+.about {
+  margin-bottom: 130px;
+  padding-top: 80px;
+}
+
+.about-title {
+  font-size: 48px;
+  font-family: 'Montserrat Bold', sans-serif;
+  text-align: center;
+  margin: 0 0 32px 0;
+}
+
+.about-text {
+  color: #979797;
+  font-size: 14px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gallery {
+  margin-bottom: 130px;
+}
+
+.gallery-title {
+  font-family: 'Montserrat Bold', sans-serif;
+  font-size: 48px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.gallery-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+}
+
+.gallery-card__item {
+  height: 300px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  padding: 20px;
+  border-radius: 10px;
+  position: relative;
+}
+
+.gallery-card__item:nth-child(1) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 2;
+  grid-column: 1 / 3;
+}
+
+.gallery-card__item:nth-child(6) {
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-column: 1 / 4;
+}
+
+.gallery-card__item span {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.booking {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 130px;
+}
+
+.booking-info {
+  max-width: 600px;
+}
+
+.booking-info_title {
+  font-size: 80px;
+  line-height: 0.8;
+}
+
+.booking-info_text {
+  color: #979797;
+  margin: 45px 0;
+}
+
+.booking-card {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  grid-gap: 10px;
+  -ms-flex-line-pack: center;
+      align-content: center;
+}
+
+.booking-card__item {
+  height: 400px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 10px;
+}
+
+.booking-card__item:nth-child(1) {
+  width: 200px;
+  height: 200px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.booking-card__item:nth-child(2) {
+  width: 300px;
+  height: 300px;
+}
+
+.booking-card__item:nth-child(3) {
+  width: 100px;
+  height: 100px;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+
+.booking-card__item:nth-child(4) {
+  max-width: 150px;
+  max-height: 150px;
+}
+
+@font-face {
+  font-family: 'Montserrat Light';
+  src: url("../assets/fonts/");
+  src: url("../assets/fonts/?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-Light.woff") format("woff"), url("../assets/fonts/Montserrat-Light.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Regular';
+  src: url("../assets/fonts/Montserrat-Regular.eot");
+  src: url("../assets/fonts/Montserrat-Regular.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-Regular.woff") format("woff"), url("../assets/fonts/Montserrat-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Semibold';
+  src: url("../assets/fonts/Montserrat-SemiBold.eot");
+  src: url("../assets/fonts/Montserrat-SemiBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-SemiBold.woff") format("woff"), url("../assets/fonts/Montserrat-SemiBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Montserrat Bold';
+  src: url("../assets/fonts/Montserrat-ExtraBold.eot");
+  src: url("../assets/fonts/Montserrat-ExtraBold.eot?#iefix") format("embedded-opentype"), url("../assets/fonts/Montserrat-ExtraBold.woff") format("woff"), url("../assets/fonts/Montserrat-ExtraBold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@media screen and (max-width: 1200px) {
+  .navbar,
+  .content,
+  .gallery,
+  .booking,
+  .footer-wrap {
+    padding: 0 20px;
+  }
+  .footer-corp {
+    padding: 20px 20px;
+  }
+}
+
+@media screen and (max-width: 1110px) {
+  .booking-card {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .booking-card__item:nth-child(1) {
+    width: 150px;
+    height: 150px;
+  }
+  .booking-card__item:nth-child(2) {
+    width: 150px;
+    height: 150px;
+  }
+  .booking-card__item:nth-child(3) {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+@media screen and (max-width: 912px) {
+  .booking-info_title {
+    font-size: 60px;
+  }
+  .booking-info_text {
+    font-size: 14px;
+  }
+  .footer-logo img {
+    width: 60px;
+  }
+  .footer-contacts_numbers {
+    font-size: 14px;
+  }
+  .footer-contacts_numbers a {
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 814px) {
+  .footer-contacts_numbers {
+    font-size: 12px;
+  }
+  .footer-menu-first, .footer-menu-second {
+    font-size: 12px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .navbar-menu {
+    width: 50%;
+  }
+  .content-title {
+    font-size: 60px;
+  }
+  .content-text {
+    font-size: 12px;
+  }
+  .btn {
+    padding: 16px 25px;
+  }
+  .about {
+    padding: 0 20px;
+  }
+  .gallery-title {
+    margin-bottom: 32px;
+  }
+  .gallery-card {
+    -ms-grid-columns: (1fr)[2];
+        grid-template-columns: repeat(2, 1fr);
+  }
+  .gallery-card__item {
+    height: 250px;
+  }
+  .gallery-card__item:nth-child(1) {
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 1;
+    grid-column: 1 / 2;
+  }
+  .gallery-card__item:nth-child(6) {
+    grid-column: initial;
+  }
+  .booking {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .booking-info {
+    text-align: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .booking-card {
+    margin-top: 30px;
+  }
+  .booking-card__item:nth-child(1) {
+    width: 150px;
+    height: 150px;
+    -ms-grid-column-align: end;
+        justify-self: end;
+    -ms-flex-item-align: end;
+        -ms-grid-row-align: end;
+        align-self: end;
+  }
+  .booking-card__item:nth-child(2) {
+    width: 200px;
+    height: 200px;
+  }
+  .booking-card__item:nth-child(3) {
+    width: 70px;
+    height: 70px;
+    -ms-grid-column-align: end;
+        justify-self: end;
+  }
+  .booking-card__item:nth-child(4) {
+    max-width: 100px;
+    max-height: 100px;
+  }
+}
+
+@media screen and (max-width: 698px) {
+  .footer {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .footer-logo, .footer-menu-first, .footer-menu-second, .footer-contacts {
+    text-align: center;
+    -ms-grid-column-align: center;
+        justify-self: center;
+  }
+  .footer-menu-first, .footer-menu-second {
+    font-family: 'Montserrat Bold', sans-serif;
+  }
+  .footer-contacts {
+    margin-top: 20px;
+  }
+  .footer-contacts-numbers {
+    margin-top: 5px;
+  }
+  .footer-corp {
+    text-align: center;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .navbar,
+  .content,
+  .gallery,
+  .booking,
+  .footer-wrap {
+    padding: 0 10px;
+  }
+  .footer-corp {
+    padding: 10px 10px;
+  }
+  .navbar-menu {
+    width: 100%;
+  }
+  .navbar-title {
+    font-size: 18px;
+    font-family: 'Montserrat Bold', sans-serif;
+  }
+  .header-content {
+    height: 470px;
+  }
+  .content-title {
+    font-size: 42px;
+  }
+  .content-text {
+    margin: 30px 0;
+  }
+  .about {
+    margin-bottom: 90px;
+  }
+  .about-title {
+    font-size: 42px;
+    margin: 0 0 25px 0;
+    padding-top: 40px;
+  }
+  .gallery {
+    margin-bottom: 90px;
+  }
+  .gallery-title {
+    font-size: 42px;
+  }
+  .gallery-card {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
+  .booking {
+    margin-bottom: 90px;
+  }
+  .booking-info_title {
+    font-size: 42px;
+  }
+  .booking-info_text {
+    margin: 30px 0;
+  }
+  .footer-contacts {
+    margin-top: 35px;
+  }
+}
+
+@media screen and (max-width: 390px) {
+  .navbar-title {
+    font-size: 16px;
+  }
+  .booking-card__item:nth-child(1) {
+    width: 100px;
+    height: 100px;
+  }
+  .booking-card__item:nth-child(2) {
+    width: 150px;
+    height: 150px;
+  }
+  .booking-card__item:nth-child(3) {
+    width: 60px;
+    height: 60px;
+  }
+  .booking-card__item:nth-child(4) {
+    max-width: 70px;
+    max-height: 70px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .booking-card__item:nth-child(2) {
+    width: 130px;
+    height: 130px;
+  }
+}
+/*# sourceMappingURL=s-home.css.map */
