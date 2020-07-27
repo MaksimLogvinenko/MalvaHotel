@@ -1,0 +1,30 @@
+button
+  outline: none
+  border: none
+  border-radius: 5px
+  width: 200px
+.btn
+  display: inline-block
+  cursor: pointer
+  padding: 22px 44px
+  color: $white
+  text-decoration: none
+  letter-spacing: 3px
+  text-align: center
+  font-size: 12px
+  transition: .4s
+  +font-bold
+
+.btn-blue
+  background-color: $lightBlue
+  border-radius: 5px
+  &:hover
+    background: darken($lightBlue, 10%)
+.btn-orange
+  background-color: $darkRed
+  &:hover
+    background: darken($darkRed, 10%)
+.btn-menu
+  border: 1px solid $lightBlue
+  color: $lightBlue
+  margin-top: 30px
