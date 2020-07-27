@@ -4,7 +4,7 @@ body
     width: 100%
     overflow-x: hidden
     font-size: 16px
-    color: $text-black
+    color: $darkBlue
     +regular
 *
     margin: 0
@@ -30,17 +30,17 @@ button
     font-size: 12px
     transition: .4s
 .btn-blue
-    background-color: $blue
+    background-color: $lightBlue
     border-radius: 5px
     &:hover
-        background: darken($blue, 10%)
+        background: darken($lightBlue, 10%)
 .btn-orange
-    background-color: $orange
+    background-color: $darkRed
     &:hover
-        background: darken($orange, 10%)
+        background: darken($darkRed, 10%)
 .btn-menu
-    border: 1px solid $blue
-    color: $blue
+    border: 1px solid $lightBlue
+    color: $lightBlue
     margin-top: 30px
 //END BUTTONS
 .container
@@ -146,7 +146,7 @@ button
             content: ''
             width: 20px
             height: 2px
-            background-color: $blue
+            background-color: $lightBlue
             bottom: 0
             position: absolute
             left: 50%
@@ -156,10 +156,10 @@ button
         padding: 10px 0
         width: 90%
         display: inline-block
-        color: $text-black
+        color: $darkBlue
         transition: .4s
         &:hover
-            color: $blue
+            color: $lightBlue
 .menu_active
     transform: translateX(0%)
 //END DESKTOP MENU
@@ -178,7 +178,7 @@ button
     z-index: 9999
     transition: .4s
     border-radius: 5px
-    box-shadow: 0px 0px 50px 5px rgba(0,0,0,0.75)
+    box-shadow: 0px 0px 25px 0px rgba(0,0,0,0.75)
     ul
         list-style: none
     li
@@ -191,10 +191,10 @@ button
             border-top: 1px solid $text-gray
     a
         text-decoration: none
-        color: $text-black
+        color: $darkBlue
         transition: .4s
         &:hover
-            color: $blue
+            color: $lightBlue
 //END LANGUAGE MENU
 
 .footer-wrap
@@ -212,10 +212,10 @@ button
         padding: 5px
     a
         text-decoration: none
-        color: $text-black
+        color: $darkBlue
         transition: .4s
         &:hover
-            color: $blue
+            color: $lightBlue
     &-logo
         display: flex
         align-items: center

@@ -38,7 +38,7 @@ body {
   width: 100%;
   overflow-x: hidden;
   font-size: 16px;
-  color: #1C2E3D;
+  color: #1B3242;
   font-family: 'Montserrat Regular', sans-serif;
 }
 
@@ -75,25 +75,25 @@ button {
 }
 
 .btn-blue {
-  background-color: #00859D;
+  background-color: #73AFBA;
   border-radius: 5px;
 }
 
 .btn-blue:hover {
-  background: #005a6a;
+  background: #539aa7;
 }
 
 .btn-orange {
-  background-color: #E8594E;
+  background-color: #EB6655;
 }
 
 .btn-orange:hover {
-  background: #e22f21;
+  background: #e63d27;
 }
 
 .btn-menu {
-  border: 1px solid #00859D;
-  color: #00859D;
+  border: 1px solid #73AFBA;
+  color: #73AFBA;
   margin-top: 30px;
 }
 
@@ -267,7 +267,7 @@ button {
   content: '';
   width: 20px;
   height: 2px;
-  background-color: #00859D;
+  background-color: #73AFBA;
   bottom: 0;
   position: absolute;
   left: 50%;
@@ -280,13 +280,13 @@ button {
   padding: 10px 0;
   width: 90%;
   display: inline-block;
-  color: #1C2E3D;
+  color: #1B3242;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .navbar-menu a:hover {
-  color: #00859D;
+  color: #73AFBA;
 }
 
 .menu_active {
@@ -309,8 +309,8 @@ button {
   -webkit-transition: .4s;
   transition: .4s;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
-          box-shadow: 0px 0px 50px 5px rgba(0, 0, 0, 0.75);
+  -webkit-box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
+          box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75);
 }
 
 .navbar-language_menu ul {
@@ -331,13 +331,13 @@ button {
 
 .navbar-language_menu a {
   text-decoration: none;
-  color: #1C2E3D;
+  color: #1B3242;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .navbar-language_menu a:hover {
-  color: #00859D;
+  color: #73AFBA;
 }
 
 .footer-wrap {
@@ -367,13 +367,13 @@ button {
 
 .footer a {
   text-decoration: none;
-  color: #1C2E3D;
+  color: #1B3242;
   -webkit-transition: .4s;
   transition: .4s;
 }
 
 .footer a:hover {
-  color: #00859D;
+  color: #73AFBA;
 }
 
 .footer-logo {
@@ -572,7 +572,7 @@ button {
   opacity: .4;
   padding: 10px;
   outline: none;
-  color: #1C2E3D;
+  color: #1B3242;
 }
 
 .form form button {
