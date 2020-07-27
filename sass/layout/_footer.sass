@@ -1,0 +1,46 @@
+.footer-wrap
+  border-top: 1px solid $color-gray
+  border-bottom: 1px solid $color-gray
+.footer
+  display: grid
+  grid-template-columns: repeat(4, 1fr)
+  margin: 30px 0
+  align-items: center
+  height: 100%
+  ul
+    list-style: none
+    li
+      padding: 5px
+    a
+      text-decoration: none
+      color: $color-dark-blue
+      transition: .4s
+      &:hover
+        color: $color-light-blue
+    &-logo
+      display: flex
+      align-items: center
+      &_title
+        font-size: 24px
+        +font-bold
+        margin-left: 5px
+    &-menu
+      &-first
+        justify-self: center
+    &-contacts
+      justify-self: end
+      &_numbers
+        display: flex
+        flex-direction: column
+        justify-content: center
+        a
+          padding: 5px 0
+          +font-bold
+          font-size: 14px
+        p
+          margin-top: 10px
+    &-corp
+      padding: 22px 0
+      &_text
+        font-size: 13px
+        color: $color-gray

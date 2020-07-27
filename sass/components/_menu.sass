@@ -1,0 +1,45 @@
+.navbar-menu
+  display: grid
+  align-content: center
+  width: 470px
+  height: 100%
+  position: fixed
+  background-color: $color-white
+  text-align: center
+  top: 0
+  left: 0
+  z-index: 9999
+  box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.25)
+  transition: .4s
+  transform: translateX(-110%)
+  &_close
+    img
+      width: 50px
+      position: absolute
+      top: 20px
+      right: 20px
+    ul
+      list-style: none
+    &__link
+      position: relative
+      margin-bottom: 20px
+      &::before
+        content: ''
+        width: 20px
+        height: 2px
+        background-color: $color-light-blue
+        bottom: 0
+        position: absolute
+        left: 50%
+        transform: translateX(-50%)
+    a
+      text-decoration: none
+      padding: 10px 0
+      width: 90%
+      display: inline-block
+      color: $color-dark-blue
+      transition: .4s
+      &:hover
+        color: $color-light-blue
+.menu_active
+  transform: translateX(0%)
