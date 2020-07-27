@@ -1,0 +1,328 @@
+.header
+  background-image: url(../assets/img/home-header.jpg)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+.header-content
+  height: 100vh
+  display: grid
+  align-content: center
+.content
+  max-width: 900px
+  color: $color-white
+  &-title
+    font-size: 67px
+    +font-bold
+    margin-bottom: 30px
+    &-arrow
+      bottom: 5%
+      left: 50%
+      position: absolute
+      transform: translateX(-50%)
+
+//SECTION ABOUT
+.about
+  padding-top: 80px
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  grid-column-gap: 10px
+  &-image
+    width: 100%
+    align-self: center
+    &:nth-child(4)
+      padding-bottom: 80px
+
+    &-info
+      align-self: center
+      &_title
+        font-size: 42px
+        +font-bold
+        color: $color-dark-blue
+        &_text
+          color: $color-dark-blue
+          margin: 15px 0
+          +font-light
+        &_more
+          color: $color-light-blue
+.map
+  display: grid
+  grid-template-columns: 2fr 1fr
+  &-image
+    height: 500px
+    width: 100%
+    &-info
+      background-color: $color-dark-blue
+      color: $color-white
+      padding: 0 25px
+      display: flex
+      flex-direction: column
+      justify-content: center
+      &_title
+        +font-bold
+        font-size: 25px
+        text-align: center
+        &_text
+          font-size: 12px
+          margin: 20px 0
+        &_more
+          color: $color-light-blue
+
+.booking
+  display: grid
+  grid-template-columns: repeat(2, 1fr)
+  align-items: center
+  margin-bottom: 130px
+  margin-top: 100px
+  &-info
+    max-width: 600px
+    &_title
+      font-size: 80px
+      line-height: 0.8
+      &_text
+        color: $color-gray
+        margin: 45px 0
+    &-card
+      display: grid
+      grid-template-columns: repeat(2, 1fr)
+      grid-gap: 10px
+      align-content: center
+      &__item
+        height: 400px
+        background-repeat: no-repeat
+        background-size: cover
+        background-position: center
+        border-radius: 10px
+        &:nth-child(1)
+          width: 200px
+          height: 200px
+          justify-self: end
+          align-self: end
+          &:nth-child(2)
+            width: 300px
+            height: 300px
+            &:nth-child(3)
+              width: 100px
+              height: 100px
+              justify-self: end
+            &:nth-child(4)
+              max-width: 150px
+              max-height: 150px
+
+@media screen and ( max-width: 1200px )
+  .navbar,
+  .content,
+  .booking,
+  .footer-wrap,
+    padding: 0 20px
+    .footer-corp
+      padding: 20px 20px
+
+@media screen and ( max-width: 1110px )
+  .content
+    &-title
+      font-size: 45px
+    .booking
+      &-card
+        grid-template-columns: repeat(2, 1fr)
+        &__item
+          &:nth-child(1)
+            width: 150px
+            height: 150px
+            &:nth-child(2)
+              width: 150px
+              height: 150px
+              &:nth-child(3)
+                width: 150px
+                height: 150px
+
+@media screen and ( max-width: 912px )
+  .about
+    &-info
+      &_title
+        font-size: 30px
+
+    .booking
+      &-info
+        &_title
+          font-size: 60px
+          &_text
+            font-size: 14px
+    .footer
+      &-logo
+        img
+          width: 60px
+        &-contacts
+          &_numbers
+            font-size: 14px
+            a
+              padding: 10px 0
+
+@media screen and ( max-width: 814px )
+  .map
+    &-image
+      height: 300px
+    .footer
+      &-contacts
+        &_numbers
+          font-size: 12px
+        &-menu
+          &-first,
+          &-second
+            font-size: 12px
+
+@media screen and ( max-width: 768px )
+  .navbar
+    &-menu
+      width: 50%
+    .btn
+      padding: 16px 25px
+    .about
+      padding: 0 20px
+      padding-top: 60px
+      &-info
+        &_text
+          font-size: 13px
+    .booking
+      grid-template-columns: repeat(1, 1fr)
+      &-info
+        text-align: center
+        justify-self: center
+        &-card
+          margin-top: 30px
+          &__item
+            &:nth-child(1)
+              width: 150px
+              height: 150px
+              justify-self: end
+              align-self: end
+              &:nth-child(2)
+                width: 200px
+                height: 200px
+                &:nth-child(3)
+                  width: 70px
+                  height: 70px
+                  justify-self: end
+                &:nth-child(4)
+                  max-width: 100px
+                  max-height: 100px
+
+@media screen and ( max-width: 698px )
+  .about
+    grid-template-columns: repeat(1, 1fr)
+    grid-gap: 0
+    &-image
+      width: 100%
+      &-info
+        &_title
+          margin-top: 10px
+        &:nth-child(2),
+        &:nth-child(4)
+
+          display: flex
+          flex-flow: wrap
+          .about-image
+            order: 1
+            .about-info
+              order: 2
+    .map
+      display: flex
+      flex-direction: column
+      &-image
+        order: 2
+        &-info
+          padding: 40px
+          order: 1
+
+    footer
+      .footer
+        grid-template-columns: repeat(1, 1fr)
+        &-logo,
+        &-menu-first,
+        &-menu-second,
+        &-contacts
+          text-align: center
+          justify-self: center
+          &-logo
+            img
+              width: 35px
+              height: 40px
+            &-menu-first,
+            &-menu-second
+              li
+                padding: 8px
+                a
+                  +font-regular
+            &-menu-first,
+            &-menu-second
+              +font-bold
+            &-contacts
+              display: none
+            &-corp
+              text-align: center
+
+@media screen and ( max-width: 480px )
+  .navbar,
+  .content,
+  .booking,
+  .footer-wrap,
+    padding: 0 10px
+    .footer-corp
+      padding: 10px 10px
+    .navbar
+      &-menu
+        width: 100%
+        &-title
+          font-size: 18px
+          +font-bold
+    .header-content
+    .content
+      &-title
+        font-size: 42px
+        &-text
+          margin: 30px 0
+    .about
+      &-title
+        font-size: 42px
+        margin: 0 0 25px 0
+        padding-top: 40px
+    .booking
+      margin-bottom: 90px
+      &-info
+        &_title
+          font-size: 42px
+          &_text
+            margin: 30px 0
+    .footer
+      &-contacts
+        margin-top: 35px
+
+@media screen and ( max-width: 390px )
+  .navbar
+    &-title
+      font-size: 16px
+    .content
+      &-title
+        font-size: 35px
+    .booking
+      &-card
+        &__item
+          &:nth-child(1)
+            width: 100px
+            height: 100px
+            &:nth-child(2)
+              width: 150px
+              height: 150px
+              &:nth-child(3)
+                width: 60px
+                height: 60px
+                &:nth-child(4)
+                  max-width: 70px
+                  max-height: 70px
+
+@media screen and ( max-width: 320px )
+  .booking
+    &-card
+      &__item
+        &:nth-child(2)
+          width: 130px
+          height: 130px
