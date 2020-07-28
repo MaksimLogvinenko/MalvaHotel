@@ -1,46 +1,46 @@
-.footer-wrap
-  border-top: 1px solid $color-gray
-  border-bottom: 1px solid $color-gray
+footer
+  border-top: 1px solid rgba($color-black, 0.2)
+
 .footer
-  display: grid
-  grid-template-columns: repeat(4, 1fr)
-  margin: 30px 0
-  align-items: center
-  height: 100%
-  ul
-    list-style: none
-    li
-      padding: 5px
-    a
-      text-decoration: none
+  display: flex
+  justify-content: space-between
+  padding: 9.6rem 0
+  
+  &__menu
+    font-size: 1.8rem
+    line-height: 3.2rem
+
+    & ul
+      list-style: none
+
+    & a
       color: $color-dark-blue
-      transition: .4s
-      &:hover
-        color: $color-light-blue
-    &-logo
+      text-decoration: none
+
+  &__contacts
+    max-width: 32rem
+    
+    &--links
       display: flex
-      align-items: center
-      &_title
-        font-size: 24px
-        +font-bold
-        margin-left: 5px
-    &-menu
-      &-first
-        justify-self: center
-    &-contacts
-      justify-self: end
-      &_numbers
-        display: flex
-        flex-direction: column
-        justify-content: center
-        a
-          padding: 5px 0
-          +font-bold
-          font-size: 14px
-        p
-          margin-top: 10px
-    &-corp
-      padding: 22px 0
-      &_text
-        font-size: 13px
-        color: $color-gray
+      flex-direction: column
+      +font-bold
+      font-size: 1.4rem
+      margin-bottom: 1.2rem
+
+      a
+        text-decoration: none
+        color: $color-dark-blue
+    
+    &--address
+      font-size: 1.4rem
+
+  &__logo
+    display: flex
+    align-items: center
+
+  &__corp
+    padding: 3.2rem 0
+    border-top: 1px solid rgba($color-black, 0.2)
+
+    &--text
+      font-size: 1.3rem
