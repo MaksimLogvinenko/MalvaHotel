@@ -51,6 +51,7 @@
 
 .page-heading__title {
   font-size: 7.2rem;
+  margin-bottom: 3.2rem;
   font-family: 'Montserrat Bold', sans-serif; }
 
 .heading-primary {
@@ -82,11 +83,23 @@
 html {
   font-size: 62.5%;
   scroll-behavior: smooth; }
+  @media only screen and (max-width: 75em) {
+    html {
+      font-size: 56.25%; } }
+  @media only screen and (max-width: 56.25em) {
+    html {
+      font-size: 50%; } }
+  @media only screen and (min-width: 112.5em) {
+    html {
+      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
   color: #1B3242;
   font-family: 'Montserrat Regular', sans-serif; }
+  @media only screen and (max-width: 56.25em) {
+    body {
+      padding: 0; } }
 
 ::selection {
   background-color: #1B3242;
