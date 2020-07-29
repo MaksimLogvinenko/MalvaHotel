@@ -1,4 +1,4 @@
-.navbar-menu
+.menu
   display: grid
   align-content: center
   width: 470px
@@ -9,37 +9,43 @@
   top: 0
   left: 0
   z-index: 9999
-  box-shadow: 10px 0px 5px 0px rgba(0,0,0,0.25)
+  box-shadow: 0 1rem 2rem rgba($color-black, 0.3)
   transition: .4s
   transform: translateX(-110%)
-  &_close
+  
+  &__close-btn
+    position: absolute
+    top: 2rem
+    left: 2rem
+
     img
       width: 50px
+
+  ul
+    list-style: none
+
+  &__link
+    position: relative
+    margin-bottom: 20px
+    &::before
+      content: ''
+      width: 20px
+      height: 2px
+      background-color: $color-light-blue
+      bottom: 0
       position: absolute
-      top: 20px
-      right: 20px
-    ul
-      list-style: none
-    &__link
-      position: relative
-      margin-bottom: 20px
-      &::before
-        content: ''
-        width: 20px
-        height: 2px
-        background-color: $color-light-blue
-        bottom: 0
-        position: absolute
-        left: 50%
-        transform: translateX(-50%)
-    a
-      text-decoration: none
-      padding: 10px 0
-      width: 90%
-      display: inline-block
-      color: $color-dark-blue
-      transition: .4s
-      &:hover
-        color: $color-light-blue
-.menu_active
-  transform: translateX(0%)
+      left: 50%
+      transform: translateX(-50%)
+      
+  a
+    text-decoration: none
+    padding: 10px 0
+    width: 90%
+    display: inline-block
+    color: $color-dark-blue
+    transition: .4s
+    &:hover
+      color: $color-light-blue
+  
+  &--active
+    transform: translateX(0%)

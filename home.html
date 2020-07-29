@@ -12,18 +12,18 @@
 
 <body>
     <!-- DESKTOP MENU -->
-    <div class="navbar-menu">
-        <div class="navbar-menu_close">
+    <div class="menu">
+        <div class="menu__close-btn">
             <a href="#"><img src="assets/logo/close.png" alt=""></a>
         </div>
-        <ul>
-            <li class="navbar-menu__link"><a href="/">Головна</a></li>
-            <li class="navbar-menu__link"><a href="about.html">Про готель</a></li>
-            <li class="navbar-menu__link"><a href="#">Їжа та напої</a></li>
-            <li class="navbar-menu__link"><a href="#">Ціни</a></li>
-            <li class="navbar-menu__link"><a href="#">Як дістатись</a></li>
-            <li class="navbar-menu__link"><a href="/gallery.html">Галерея</a></li>
-            <li class="navbar-menu__link"><a href="#">Контакти</a></li>
+        <ul class="menu__links">
+            <li class="menu__link"><a href="/">Головна</a></li>
+            <li class="menu__link"><a href="about.html">Про готель</a></li>
+            <li class="menu__link"><a href="#">Їжа та напої</a></li>
+            <li class="menu__link"><a href="#">Ціни</a></li>
+            <li class="menu__link"><a href="#">Як дістатись</a></li>
+            <li class="menu__link"><a href="/gallery.html">Галерея</a></li>
+            <li class="menu__link"><a href="#">Контакти</a></li>
             <a href="#" class="btn btn-menu">Забронювати номер</a>
         </ul>
     </div>
@@ -42,13 +42,13 @@
     </div>
     <!-- END LANGUAGE-MENU -->
 
-    <header class="header">
+    <header class="header header--fullscreen header--homescreen">
         <div class="container">
             <div class="navbar navbar--white">
                 <div class="navbar__menu-btn">
                     <span class="navbar__menu-icon"></span>
                 </div>
-                <div class="logo">
+                <div class="navbar__logo logo">
                     <img class="logo__temp-box">
                     <div class="logo__name">
                         Мальва
@@ -64,15 +64,15 @@
                 </select>
             </div>
         </div>
-    </header>
-
-    <section class="section-hero">
-        <div class="container">
-            <h1 class="section-hero__title">Подаруйте собі незабутній відпочинок на Драгобраті</h1>
-            <a href="#" class="btn btn--red">Забронювати номер</a>
+        
+        <div class="header__textbox">
+            <div class="container">
+                <h1 class="header__title">Подаруйте собі незабутній відпочинок на Драгобраті</h1>
+                <a href="#" class="btn btn--red">Забронювати номер</a>
+            </div>
+            <a href="#about" class="header__arrow"><img src="assets/logo/arrow-down.png" alt=""></a>
         </div>
-        <a href="#about" class="section-hero__arrow"><img src="assets/logo/arrow-down.png" alt=""></a>
-    </section>
+    </header>
 
     <section id="about" class="section-about">
         <div class="container">

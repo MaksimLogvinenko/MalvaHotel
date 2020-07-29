@@ -1,36 +1,87 @@
 .header
-  position: fixed
   width: 100%
   height: 19.2rem
   z-index: 9000
 
   display: flex
-  align-items: center
+  flex-direction: column
+  position: relative
 
-  &--pinned
-    background-color: $color-white
-    height: 9rem
-    box-shadow: 0 1rem 1rem rgba($color-black, 0.1)
+  background-position: center
+  background-repeat: no-repeat
+  background-size: cover
+
+  &--fullscreen
+    height: 100vh
+
+  &--homescreen
+    background-image: url(../assets/img/home-header.jpg)
+
+  &__arrow
+    position: absolute
+    bottom: 4.8rem
+    left: 50%
+    transform: translateX(-50%)
+
+  &__textbox
+    flex: 1 0 auto
+    display: flex
+    flex-direction: column
+    justify-content: center
+    color: $color-white
+
+  &__title
+    padding-right: 40%
+    font-size: 7.2rem
+    +font-bold
+    color: $color-white
+    margin-bottom: 3.2rem
 
 .navbar
+  margin-top: 3rem
   transition: 1s
   display: flex
   flex-direction: row
   align-content: center
   justify-content: space-between
+  position: relative
+  height: 6rem  
 
   &--white
     color: $color-white
     & *
       color: $color-white
-  
-  &--pinned
-    color: $color-dark-blue
-    & *
-      color: $color-dark-blue
 
   &__menu-btn
+    position: fixed
     width: 4.8rem
+    transition: all .5s
+    width: 7rem
+    height: 7rem
+    border-radius: 20rem
+    cursor: pointer
+
+    animation-name: fadeInOut
+    animation-duration: 1s
+    animation-timing-function: ease-out
+
+    &--pinned
+      background-color: $color-white
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.3)
+      z-index: 9999
+      margin-left: -1rem
+
+      animation-name: fadeOutIn
+      animation-duration: 1s
+      animation-timing-function: ease-out
+
+      .navbar__menu-icon
+        margin-top: 4rem
+        margin-left: 1.5rem
+
+      .navbar__menu-icon,
+      .navbar__menu-icon::before
+        background-color: $color-dark-blue
 
   &__menu-icon
     position: relative
@@ -38,7 +89,7 @@
 
     &,
     &::before
-      width: 4.8rem
+      width: 4rem
       height: .2rem
       background-color: $color-white
       display: inline-block
@@ -50,8 +101,16 @@
       transition: all 0.2s
       top: -1rem
 
+  &__logo
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
   &__lng-select
-    margin-top: 1rem
+    position: absolute
+    top: 0
+    right: 0
     font-size: 2.4rem
     +font-semibold
 
@@ -60,7 +119,6 @@
 
     border: none
     background-color: transparent
-    position: relative
 
     & option
       color: $color-dark-blue
