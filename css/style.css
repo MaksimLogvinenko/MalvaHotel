@@ -500,3 +500,42 @@ footer {
 
 .section-booking {
   padding: 11.8rem 0; }
+
+#top-image {
+  background: url(../assets/img/background404.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 100%;
+  z-index: 0;
+  height: 100%; }
+
+.header__title404 {
+  margin-top: 6rem;
+  text-align: center;
+  font-size: 24rem;
+  font-family: 'Montserrat Bold', sans-serif;
+  color: #fff;
+  opacity: 0.6;
+  margin-bottom: -1rem; }
+
+.header__subtitle404 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 2.4rem;
+  margin-bottom: 6px;
+  color: #fff;
+  opacity: 0.8; }
+
+.container404 {
+  text-align: center; }
+  .container404 .btn404 {
+    margin-top: 5rem;
+    margin-bottom: 0rem; }
+
+@media screen and (max-width: 698px) {
+  .header__title404 {
+    font-size: 12rem; }
+  .header__subtitle404 {
+    font-size: 1.8rem; } }
