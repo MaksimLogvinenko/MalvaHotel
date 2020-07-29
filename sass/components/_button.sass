@@ -1,38 +1,85 @@
-button
-  outline: none
-  border: none
-  border-radius: 5px
-  width: 200px
-
 .btn
-  display: inline-block
-  cursor: pointer
-  padding: 22px 44px
-  color: $color-white
-  text-decoration: none
-  letter-spacing: 3px
-  text-align: center
-  font-size: 12px
-  transition: .4s
-  +font-bold
 
-.btn-blue
-  background-color: $color-light-blue
-  border-radius: 5px
-  &:hover
-    background: darken($color-light-blue, 10%)
-.btn-orange
-  background-color: $color-dark-red
-  &:hover
-    background: darken($color-dark-red, 10%)
-.btn-menu
-  border: 1px solid $color-light-blue
-  color: $color-light-blue
-  margin-top: 30px
+  &,
+  &:link,
+  &:visited
+    display: inline-block
+    position: relative
+    padding: 3.2rem 4.8rem
+    text-decoration: none
+    border-radius: .8rem
+    color: $color-white
+    letter-spacing: 3px
+    text-align: center
+    font-size: 1.2rem
+    transition: .4s
+    +font-bold
 
-.btn-text
-  +font-bold
-  font-size: 1.4rem
-  margin-bottom: 2.4rem
-  color: $color-light-blue
-  text-decoration: none
+    // For <button>
+    cursor: pointer
+    border: none
+
+  &:hover
+    transform: translateY(-3px)
+    box-shadow: 0 1rem 2rem rgba($color-black, 0.2)
+  
+    &::after
+      transform: scaleX(1.4) scaleY(1.6)
+      opacity: 0
+  
+  &:active,
+  &:focus
+    transform: translateY(-1px)
+    box-shadow: 0 1rem 1rem rgba($color-black, 0.2)
+
+  &::after
+    content: ""
+    display: inline-block
+    height: 100%
+    width: 100%
+    border-radius: .8rem
+    position: absolute
+    top: 0
+    left: 0
+    z-index: -1
+    transition: all 0.4s
+
+  &--blue
+    background-color: $color-light-blue
+
+    &::after
+      background-color: $color-light-blue
+
+  &--red
+    background-color: $color-dark-red
+
+    &::after
+      background-color: $color-dark-red
+
+  &--menu
+    border: 1px solid $color-light-blue
+    color: $color-light-blue
+    margin-top: 30px
+
+  &--text
+    &:link,
+    &:visited
+      display: inline-block
+      +font-bold
+      font-size: 1.4rem
+      margin-bottom: 2.4rem
+      color: $color-light-blue
+      text-decoration: none
+      border-bottom: 1px solid $color-light-blue
+      padding: .8rem
+      transition: all .2s
+          
+    &:hover
+      background-color: $color-light-blue
+      color: $color-white
+      box-shadow: 0 1rem 2rem rgba($color-black, 0.15)
+      transform: translateY(-2px)
+
+    &:active 
+      box-shadow: 0 .5rem 1rem rgba($color-black, 0.15)
+      transform: translateY(0px)
