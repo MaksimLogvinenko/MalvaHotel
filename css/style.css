@@ -435,6 +435,15 @@ body {
   grid-template-columns: repeat(3, 1fr);
   height: 9rem;
   align-items: center; }
+  .navbar--pinned svg {
+    position: fixed;
+    background-color: #73AFBA;
+    padding: 20px;
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    z-index: 999;
+    box-shadow: 4px 10px 26px 0px rgba(0, 0, 0, 0.75); }
   .navbar--white {
     color: #fff; }
     .navbar--white * {
@@ -444,20 +453,6 @@ body {
     padding: 10px;
     cursor: pointer;
     width: 10rem; }
-    .navbar__menu-btn--pinned {
-      background-color: #fff;
-      box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
-      z-index: 9999;
-      margin-left: -1rem;
-      animation-name: fadeOutIn;
-      animation-duration: 1s;
-      animation-timing-function: ease-out; }
-      .navbar__menu-btn--pinned .navbar__menu-icon {
-        margin-top: 4rem;
-        margin-left: 1.5rem; }
-      .navbar__menu-btn--pinned .navbar__menu-icon,
-      .navbar__menu-btn--pinned .navbar__menu-icon::before {
-        background-color: #1B3242; }
   .navbar__menu-icon {
     width: 6rem;
     height: 0.4rem;
@@ -481,6 +476,8 @@ body {
       text-decoration: none;
       font-size: 2rem;
       text-transform: uppercase; }
+      .navbar__lng a svg {
+        transform: translateY(30%); }
   .navbar-language_menu {
     display: none;
     align-content: center;

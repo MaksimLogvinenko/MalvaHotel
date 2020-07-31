@@ -42,34 +42,28 @@
   height: 9rem  
   align-items: center
 
+  &--pinned
+
+    svg
+      position: fixed
+      background-color: $color-light-blue
+      padding: 20px
+      width: 10rem
+      height: 10rem
+      border-radius: 50%
+      z-index: 999
+      box-shadow: 4px 10px 26px 0px rgba(0,0,0,0.75)
+      
   &--white
     color: $color-white
     & *
       color: $color-white
 
-  &__menu-btn
+  &__menu-btn 
     display: inline-block
     padding: 10px
     cursor: pointer
     width: 10rem
-
-    &--pinned
-      background-color: $color-white
-      box-shadow: 0 1rem 2rem rgba($color-black, 0.3)
-      z-index: 9999
-      margin-left: -1rem
-
-      animation-name: fadeOutIn
-      animation-duration: 1s
-      animation-timing-function: ease-out
-
-      .navbar__menu-icon
-        margin-top: 4rem
-        margin-left: 1.5rem
-
-      .navbar__menu-icon,
-      .navbar__menu-icon::before
-        background-color: $color-dark-blue
 
   &__menu-icon
     width: 6rem
@@ -96,6 +90,8 @@
       text-decoration: none
       font-size: 2rem
       text-transform: uppercase
+      svg
+        transform: translateY(30%)
 
   &-language_menu
     //LANGUAGE MENU
@@ -129,3 +125,5 @@
         &:hover
             color: $color-light-blue
 //END LANGUAGE MENU
+
+
