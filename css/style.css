@@ -480,7 +480,7 @@ body {
     .navbar__menu-icon, .navbar__menu-icon::before {
       width: 4rem;
       height: .2rem;
-      background-color: #fff;
+      background-color: #1B3242;
       display: inline-block; }
     .navbar__menu-icon::before {
       content: "";
