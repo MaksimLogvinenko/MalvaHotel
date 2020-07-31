@@ -1,27 +1,39 @@
 .info-card
   display: flex
   flex-direction: row
-  margin-bottom: 9.6rem
+  margin-bottom: 6.4rem
 
-  .info-card__image-box
+  & div:nth-child(1)
+    margin-right: 2.4rem
     margin-left: 0
-    margin-right: 3.2rem
 
-  .info-card__textbox
-    margin-left: 3.2rem
+  & div:nth-child(2)
+    margin-left: 2.4rem
     margin-right: 0
 
   &--reversed
     flex-direction: row-reverse
 
-    .info-card__image-box
-      margin-left: 3.2rem
+    & div:nth-child(1)
+      margin-left: 2.4rem
       margin-right: 0
 
-    .info-card__textbox
+    & div:nth-child(2)
       margin-left: 0
-      margin-right: 3.2rem
+      margin-right: 2.4rem
+  
+  @include respond(tab-port)
+    &, &--reversed
+      @include respond(tab-port)
+      flex-direction: column
 
+      & div:nth-child(1),
+      & div:nth-child(2)
+        margin: 0
+
+      & div:nth-child(1)
+        margin-bottom: 3.2rem
+      
   &__image-box
     flex: 1
   

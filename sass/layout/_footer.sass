@@ -5,10 +5,21 @@ footer
   display: flex
   justify-content: space-between
   padding: 9.6rem 0
+
+  @include respond(phone)
+    flex-direction: column
+    align-items: center
   
+  &__logo
+    @include respond(phone)
+      margin-bottom: 5.2rem
+
   &__menu
-    font-size: 1.8rem
+    font-size: 1.6rem
     line-height: 3.2rem
+
+    @include respond(phone)
+      text-align: center
 
     & ul
       list-style: none
@@ -19,6 +30,9 @@ footer
 
   &__contacts
     max-width: 32rem
+
+    @include respond(phone)
+      margin-top: 5.2rem
     
     &--links
       display: flex

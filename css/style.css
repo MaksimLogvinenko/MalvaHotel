@@ -50,18 +50,22 @@
   color: #fff; }
 
 .page-heading__title {
-  font-size: 7.2rem;
-  margin-bottom: 3.2rem;
+  font-size: 6.8rem;
+  margin-bottom: 4.2rem;
   font-family: 'Montserrat Bold', sans-serif; }
+  @media only screen and (max-width: 37.5em) {
+    .page-heading__title {
+      font-size: 4.2rem;
+      line-height: 6.2rem; } }
 
 .heading-primary {
   font-family: 'Montserrat Bold', sans-serif;
-  font-size: 4.8rem;
+  font-size: 3.6rem;
   margin-bottom: 2.4rem; }
 
 .heading-secondary {
   font-family: 'Montserrat Bold', sans-serif;
-  font-size: 3.2rem;
+  font-size: 2.8rem;
   margin-bottom: 1.2rem; }
 
 .paragraph-primary {
@@ -89,9 +93,6 @@ html {
   @media only screen and (max-width: 56.25em) {
     html {
       font-size: 50%; } }
-  @media only screen and (min-width: 112.5em) {
-    html {
-      font-size: 75%; } }
 
 body {
   box-sizing: border-box;
@@ -112,9 +113,9 @@ body {
   text-decoration: none;
   border-radius: .8rem;
   color: #fff;
-  letter-spacing: 3px;
+  letter-spacing: .2rem;
   text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   transition: .4s;
   font-family: 'Montserrat Bold', sans-serif;
   cursor: pointer;
@@ -282,21 +283,30 @@ body {
 .info-card {
   display: flex;
   flex-direction: row;
-  margin-bottom: 9.6rem; }
-  .info-card .info-card__image-box {
-    margin-left: 0;
-    margin-right: 3.2rem; }
-  .info-card .info-card__textbox {
-    margin-left: 3.2rem;
+  margin-bottom: 6.4rem; }
+  .info-card div:nth-child(1) {
+    margin-right: 2.4rem;
+    margin-left: 0; }
+  .info-card div:nth-child(2) {
+    margin-left: 2.4rem;
     margin-right: 0; }
   .info-card--reversed {
     flex-direction: row-reverse; }
-    .info-card--reversed .info-card__image-box {
-      margin-left: 3.2rem;
+    .info-card--reversed div:nth-child(1) {
+      margin-left: 2.4rem;
       margin-right: 0; }
-    .info-card--reversed .info-card__textbox {
+    .info-card--reversed div:nth-child(2) {
       margin-left: 0;
-      margin-right: 3.2rem; }
+      margin-right: 2.4rem; }
+  @media only screen and (max-width: 56.25em) {
+    .info-card, .info-card--reversed {
+      flex-direction: column; }
+      .info-card div:nth-child(1),
+      .info-card div:nth-child(2), .info-card--reversed div:nth-child(1),
+      .info-card--reversed div:nth-child(2) {
+        margin: 0; }
+      .info-card div:nth-child(1), .info-card--reversed div:nth-child(1) {
+        margin-bottom: 3.2rem; } }
   .info-card__image-box {
     flex: 1; }
   .info-card__image {
@@ -316,10 +326,13 @@ body {
 
 .mapbox {
   display: flex;
-  color: #fff; }
+  color: #fff;
+  height: 82rem; }
+  @media only screen and (max-width: 56.25em) {
+    .mapbox {
+      flex-direction: column-reverse; } }
   .mapbox__canvas {
-    flex: 2;
-    height: 82rem; }
+    flex: 2; }
   .mapbox__textbox {
     padding: 3.2rem;
     flex: 1;
@@ -328,25 +341,48 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start; }
+    @media only screen and (max-width: 75em) {
+      .mapbox__textbox {
+        flex: 2; } }
+    @media only screen and (max-width: 56.25em) {
+      .mapbox__textbox {
+        padding: 4.2rem 3.2rem; } }
 
 .booking-card {
-  display: flex;
-  flex-direction: row; }
-  .booking-card .booking-card__imagebox {
-    margin-left: 3.2rem;
-    margin-right: 0; }
-  .booking-card .booking-card__textbox {
-    margin-left: 0;
+  display: flex; }
+  .booking-card div:nth-child(1) {
     margin-right: 3.2rem; }
-  .booking-card__imagebox {
+  .booking-card div:nth-child(2) {
+    margin-left: 3.2rem; }
+  @media only screen and (max-width: 56.25em) {
+    .booking-card {
+      flex-direction: column; }
+      .booking-card div:nth-child(1),
+      .booking-card div:nth-child(2) {
+        margin: 0; } }
+  .booking-card__image-box {
     flex: 1;
-    width: 50vw; }
+    display: flex;
+    align-items: center;
+    justify-content: center; }
   .booking-card__textbox {
     flex: 1;
     flex-direction: column;
     display: flex;
     justify-content: center;
     align-items: start; }
+    @media only screen and (max-width: 56.25em) {
+      .booking-card__textbox {
+        align-items: center;
+        padding-bottom: 4.8rem; } }
+  .booking-card__image {
+    width: 100%; }
+    @media only screen and (max-width: 56.25em) {
+      .booking-card__image {
+        width: 50%; } }
+    @media only screen and (max-width: 37.5em) {
+      .booking-card__image {
+        width: 80%; } }
 
 .logo {
   display: flex;
@@ -452,6 +488,7 @@ body {
     left: 50%;
     transform: translate(-50%, -50%); }
   .navbar__lng-select {
+    margin-top: .5rem;
     position: absolute;
     top: 0;
     right: 0;
@@ -471,9 +508,19 @@ footer {
   display: flex;
   justify-content: space-between;
   padding: 9.6rem 0; }
+  @media only screen and (max-width: 37.5em) {
+    .footer {
+      flex-direction: column;
+      align-items: center; } }
+  @media only screen and (max-width: 37.5em) {
+    .footer__logo {
+      margin-bottom: 5.2rem; } }
   .footer__menu {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     line-height: 3.2rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__menu {
+        text-align: center; } }
     .footer__menu ul {
       list-style: none; }
     .footer__menu a {
@@ -481,6 +528,9 @@ footer {
       text-decoration: none; }
   .footer__contacts {
     max-width: 32rem; }
+    @media only screen and (max-width: 37.5em) {
+      .footer__contacts {
+        margin-top: 5.2rem; } }
     .footer__contacts--links {
       display: flex;
       flex-direction: column;
@@ -508,8 +558,8 @@ footer {
   padding: 0 3.2rem; }
 
 .section-about {
-  padding-bottom: 4.2rem;
-  padding-top: 11.8rem; }
+  padding-bottom: 2.4rem;
+  padding-top: 9.6rem; }
 
 .section-booking {
   padding: 11.8rem 0; }
