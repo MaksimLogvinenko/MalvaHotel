@@ -6,23 +6,19 @@
   position: fixed
   background-color: $color-white
   text-align: center
-  top: 0
-  left: 0
   z-index: 9999
   box-shadow: 0 1rem 2rem rgba($color-black, 0.3)
   transition: .4s
   transform: translateX(-110%)
-  
+  ul
+    list-style: none
+
   &__close-btn
     position: absolute
     top: 2rem
-    left: 2rem
-
+    right: 2rem
     img
       width: 50px
-
-  ul
-    list-style: none
 
   &__link
     position: relative
@@ -44,6 +40,7 @@
     display: inline-block
     color: $color-dark-blue
     transition: .4s
+    font-size: 1.7rem
     &:hover
       color: $color-light-blue
   

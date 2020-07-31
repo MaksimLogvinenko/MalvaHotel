@@ -188,20 +188,18 @@ body {
   position: fixed;
   background-color: #fff;
   text-align: center;
-  top: 0;
-  left: 0;
   z-index: 9999;
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.3);
   transition: .4s;
   transform: translateX(-110%); }
+  .menu ul {
+    list-style: none; }
   .menu__close-btn {
     position: absolute;
     top: 2rem;
-    left: 2rem; }
+    right: 2rem; }
     .menu__close-btn img {
       width: 50px; }
-  .menu ul {
-    list-style: none; }
   .menu__link {
     position: relative;
     margin-bottom: 20px; }
@@ -220,7 +218,8 @@ body {
     width: 90%;
     display: inline-block;
     color: #1B3242;
-    transition: .4s; }
+    transition: .4s;
+    font-size: 1.7rem; }
     .menu a:hover {
       color: #73AFBA; }
   .menu--active {
@@ -476,16 +475,42 @@ body {
       background-color: #fff; }
   .navbar__logo {
     justify-self: center; }
-  .navbar__lng-select {
-    font-size: 2.4rem;
-    font-family: 'Montserrat Semibold', sans-serif;
-    justify-self: end;
-    height: 40px;
-    padding: 0 10px;
-    border: none;
-    background-color: transparent; }
-    .navbar__lng-select option {
-      color: #1B3242; }
+  .navbar__lng {
+    justify-self: end; }
+    .navbar__lng a {
+      text-decoration: none;
+      font-size: 2rem;
+      text-transform: uppercase; }
+  .navbar-language_menu {
+    display: none;
+    align-content: center;
+    width: 30rem;
+    padding: 3rem 0;
+    position: fixed;
+    background-color: #fff;
+    text-align: center;
+    top: 8rem;
+    right: 2rem;
+    z-index: 9999;
+    transition: .4s;
+    border-radius: .5rem;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.75); }
+    .navbar-language_menu ul {
+      list-style: none; }
+    .navbar-language_menu li {
+      padding: 1.2rem 0;
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+      border-bottom: 1px solid black; }
+      .navbar-language_menu li:first-child {
+        border-top: 1px solid black; }
+    .navbar-language_menu a {
+      text-decoration: none;
+      color: #1B3242;
+      transition: .4s; }
+      .navbar-language_menu a:hover {
+        color: #73AFBA; }
 
 footer {
   border-top: 1px solid rgba(0, 0, 0, 0.2); }
@@ -493,7 +518,8 @@ footer {
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 9.6rem 0; }
+  padding: 2rem 0;
+  align-items: center; }
   @media only screen and (max-width: 37.5em) {
     .footer {
       flex-direction: column;
