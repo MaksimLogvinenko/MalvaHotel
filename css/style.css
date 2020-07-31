@@ -327,10 +327,19 @@ body {
 .mapbox {
   display: flex;
   color: #fff;
-  height: 82rem; }
+  background-color: #1B3242;
+  border-radius: .8rem;
+  overflow: hidden;
+  box-shadow: 0 0.5rem 4rem 0.5rem rgba(0, 0, 0, 0.11);
+  transition: transform .3s ease-in-out;
+  height: 60rem; }
+  .mapbox:hover {
+    box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
+    transform: translateY(-2px) scale(1.01); }
   @media only screen and (max-width: 56.25em) {
     .mapbox {
-      flex-direction: column-reverse; } }
+      flex-direction: column-reverse;
+      height: 80rem; } }
   .mapbox__canvas {
     flex: 2; }
   .mapbox__textbox {
@@ -341,9 +350,6 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: start; }
-    @media only screen and (max-width: 75em) {
-      .mapbox__textbox {
-        flex: 2; } }
     @media only screen and (max-width: 56.25em) {
       .mapbox__textbox {
         padding: 4.2rem 3.2rem; } }
