@@ -7,3 +7,28 @@
 .text-container
   max-width: 90rem
   margin: 2.8rem auto
+
+.image-container
+  max-width: 100rem
+  margin: 2.8rem auto
+  display: flex
+  justify-content: center
+  overflow: hidden
+
+  @include respond(tab-port)
+    flex-direction: column
+    height: auto
+
+  img
+    max-width: 100%
+    border-radius: .8rem
+    margin: 1.2rem
+    object-fit: cover
+    max-height: 45rem
+    width: auto
+
+    @include respond(tab-land)
+      max-height: 40rem
+
+    @include respond(tab-port)
+      max-height: 60rem
