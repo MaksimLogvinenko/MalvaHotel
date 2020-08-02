@@ -1,0 +1,47 @@
+.composition
+  display: flex
+  justify-content: center
+  margin: 4.2rem auto
+
+  @include respond(phone)
+    flex-direction: column
+    align-items: center
+
+  &__image
+    width: 30%
+    height: auto
+    border-radius: .8rem
+    transition: all .3s
+    box-shadow: 0 .5rem 4rem .5rem rgba($color-black, 0.11)
+
+    &--1
+      z-index: 1
+      margin-right: -5%
+
+    &--2
+      transform: scale(1.1)
+      z-index: 3
+
+    &--3
+      z-index: 2
+      margin-left: -5%
+    
+    &:hover
+      transform: scale(1.15)
+      box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5)
+      z-index: 20
+
+    @include respond(phone)
+      width: 70%
+
+      &--1,
+      &--2,
+      &--3
+        margin: 1.2rem 0
+      
+      &--2
+        transform: none
+
+
+  &:hover &__image:not(:hover)
+    transform: scale(0.95)
