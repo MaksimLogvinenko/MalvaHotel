@@ -1,0 +1,52 @@
+.numbers__image
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1rem
+    justify-self: center
+    max-width: 150rem
+    margin: 0 auto
+    .image__item
+        transition: all .3s
+        img
+            width: 100%
+            max-height: 30rem
+        &:hover
+            transform: scale(1.15)
+            box-shadow: 0 2.5rem 4rem rgba($color-black, 0.5)
+            z-index: 20
+
+.price__card
+    display: grid
+    grid-template-columns: repeat(3, 1fr)
+    grid-gap: 1rem
+    margin-bottom: 4rem
+
+.card__period
+    font-size: 1rem
+.card__season
+    font-size: 3.2rem
+.card__price
+    font-size: 6.4rem
+
+.price__btn
+    display: flex
+    justify-content: center
+    margin-bottom: 9rem
+
+.price-info
+    display: grid
+    grid-template-columns: repeat(2, 1fr)
+    grid-gap: 1rem
+    .info-card
+        justify-self: center
+        display: flex
+        flex-direction: column
+        &__title
+            font-size: 3.6rem
+            +font-bold
+            margin-bottom: 3rem
+        &__point
+            font-size: 1.8rem
+            margin-bottom: 1.5rem
+
+    

@@ -726,3 +726,56 @@ footer {
     font-size: 12rem; }
   .header__subtitle404 {
     font-size: 1.8rem; } }
+
+.numbers__image {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  justify-self: center;
+  max-width: 150rem;
+  margin: 0 auto; }
+  .numbers__image .image__item {
+    transition: all .3s; }
+    .numbers__image .image__item img {
+      width: 100%;
+      max-height: 30rem; }
+    .numbers__image .image__item:hover {
+      transform: scale(1.15);
+      box-shadow: 0 2.5rem 4rem rgba(0, 0, 0, 0.5);
+      z-index: 20; }
+
+.price__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 1rem;
+  margin-bottom: 4rem; }
+
+.card__period {
+  font-size: 1rem; }
+
+.card__season {
+  font-size: 3.2rem; }
+
+.card__price {
+  font-size: 6.4rem; }
+
+.price__btn {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 9rem; }
+
+.price-info {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 1rem; }
+  .price-info .info-card {
+    justify-self: center;
+    display: flex;
+    flex-direction: column; }
+    .price-info .info-card__title {
+      font-size: 3.6rem;
+      font-family: 'Montserrat Bold', sans-serif;
+      margin-bottom: 3rem; }
+    .price-info .info-card__point {
+      font-size: 1.8rem;
+      margin-bottom: 1.5rem; }
