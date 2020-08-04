@@ -685,6 +685,50 @@ footer {
 .section-hotel {
   margin-bottom: 3.6rem; }
 
+.header--contactscreen {
+  background-image: url("../assets/img/contact-header.jpg"); }
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .contact__info .page-heading__text {
+    margin-bottom: 2rem; }
+  .contact__connect {
+    display: flex;
+    flex-direction: column; }
+    .contact__connect a {
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 0 1rem 3rem; }
+      .contact__connect a img {
+        margin-right: 2rem; }
+
+.contact__form {
+  display: grid;
+  align-items: center; }
+  .contact__form form {
+    display: grid;
+    width: 45rem;
+    margin: 0 auto; }
+    .contact__form form label {
+      font-size: 1.2rem;
+      font-family: 'Montserrat Light', sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 2rem 0 1rem 0; }
+    .contact__form form input,
+    .contact__form form textarea {
+      border: none;
+      background: #E3E3E3;
+      border-radius: 0.8rem;
+      opacity: .4;
+      padding: 1rem;
+      outline: none;
+      color: #1B3242; }
+    .contact__form form button {
+      margin-top: 4rem; }
+
 #top-image {
   background: url(../assets/img/background404.jpg);
   background-position: center;
@@ -779,3 +823,47 @@ footer {
     .price-info .info-card__point {
       font-size: 1.8rem;
       margin-bottom: 1.5rem; }
+
+.header--contactscreen {
+  background-image: url("../assets/img/contact-header.jpg"); }
+
+.contact {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); }
+  .contact__info .page-heading__text {
+    margin-bottom: 2rem; }
+  .contact__connect {
+    display: flex;
+    flex-direction: column; }
+    .contact__connect a {
+      font-size: 2rem;
+      color: #fff;
+      text-decoration: none;
+      padding: 1rem 0 1rem 3rem; }
+      .contact__connect a img {
+        margin-right: 2rem; }
+
+.contact__form {
+  display: grid;
+  align-items: center; }
+  .contact__form form {
+    display: grid;
+    width: 45rem;
+    margin: 0 auto; }
+    .contact__form form label {
+      font-size: 1.2rem;
+      font-family: 'Montserrat Light', sans-serif;
+      color: #fff;
+      text-transform: uppercase;
+      padding: 2rem 0 1rem 0; }
+    .contact__form form input,
+    .contact__form form textarea {
+      border: none;
+      background: #E3E3E3;
+      border-radius: 0.8rem;
+      opacity: .4;
+      padding: 1rem;
+      outline: none;
+      color: #1B3242; }
+    .contact__form form button {
+      margin-top: 4rem; }
