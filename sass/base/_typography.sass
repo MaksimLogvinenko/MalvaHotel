@@ -35,18 +35,25 @@
   font-style: normal
 
 .page-heading
+  margin: 3.2rem 0
+  text-align: center
+
   &--white
     color: $color-white
 
   &__title
     font-size: 6.8rem
-    margin-bottom: 4.2rem
-    margin-top: 10rem
+    margin-bottom: 3rem
     +font-bold
 
     @include respond(phone)
       font-size: 4.2rem
       line-height: 6.2rem
+
+  &__subtitle
+    font-size: 1.4rem
+    line-height: 2rem
+    
   &__text
     font-size: 1.2rem
     margin-bottom: 10rem
@@ -59,7 +66,6 @@
       color: $color-dark-red
   &__paragraph
     font-size: 1.4rem
-
 
 .heading-primary
   +font-bold
