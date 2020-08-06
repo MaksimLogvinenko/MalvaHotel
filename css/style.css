@@ -58,16 +58,13 @@
     @media only screen and (max-width: 37.5em) {
       .page-heading__title {
         font-size: 4.2rem;
-        line-heigh$color-blackt: 6.2rem; } }
+        line-height: 6.2rem; } }
   .page-heading__subtitle {
     font-size: 1.4rem;
     line-height: 2rem; }
-.page-heading--white {
-  color: #fff; }
-
-.page-heading__text {
-  font-size: 1.2rem;
-  margin-bottom: 10rem; }
+  .page-heading__text {
+    font-size: 1.2rem;
+    margin-bottom: 10rem; }
 
 .question__text {
   font-size: 2.3rem;
@@ -99,6 +96,9 @@
 
 .text-centered {
   text-align: center; }
+
+.text-indent {
+  text-indent: 20px; }
 
 *,
 *::after,
@@ -773,8 +773,6 @@ footer {
 .section-hotel {
   margin-bottom: 3.6rem; }
 
-.section-gallery {
-  margin: 5.2rem 0; }
 .header--contactscreen {
   background-image: url("../assets/img/contact-header.jpg"); }
 
@@ -818,6 +816,9 @@ footer {
       color: #1B3242; }
     .contact__form form button {
       margin-top: 4rem; }
+
+.section-gallery {
+  margin: 5.2rem 0; }
 
 #top-image {
   background: url(../assets/img/background404.jpg);
@@ -957,3 +958,14 @@ footer {
       color: #1B3242; }
     .contact__form form button {
       margin-top: 4rem; }
+
+.eats-container {
+  max-height: 40rem; }
+
+.heading-secondary__eats_title-top {
+  margin-top: 8rem;
+  font-size: 4.8em; }
+
+.heading-secondary__eats_title-bottom {
+  margin-bottom: 8rem;
+  font-size: 4.8em; }
